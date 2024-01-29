@@ -6,11 +6,11 @@ const { Sequelize } = require('sequelize')
 const { Tenant } = require('./tenant')
 const app = express()
 
-app.use(CookieParser())
 app.use(express.json())
+app.use(CookieParser())
 
 
-
+// Test Database connection
 testDatabaseConnection()
 
 app.use('/app', createTenant)
